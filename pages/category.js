@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import * as actions from '../redux/actions/Actions';
 import Layout from '../components/layout/Layout';
 import List from '../components/list/List';
-import { Container, ProductsContainer, ProductsTitle } from './styles/styles';
+import { Container, ProductsContainer, ProductsTitle } from '../styles/styles';
 import { LIST_TYPE } from '../utils/Constants';
 
 export function Category({ user, productsLoaded, getUser, getProducts, redeem }) {

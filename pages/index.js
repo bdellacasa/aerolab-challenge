@@ -5,7 +5,7 @@ import * as actions from '../redux/actions/Actions';
 import Layout from '../components/layout/Layout';
 import Hero from '../components/hero/Hero';
 import List from '../components/list/List';
-import { Container, IndexContainer, Title } from './styles/styles';
+import { Container, IndexContainer, Title } from '../styles/styles';
 import { LIST_TYPE } from '../utils/Constants';
 import categories from '../utils/categories';
 

@@ -5,7 +5,7 @@ import * as actions from '../redux/actions/Actions';
 import { checkWordMatch } from '../utils/Helpers';
 import Layout from '../components/layout/Layout';
 import List from '../components/list/List';
-import { Container, ProductsContainer, ProductsTitle } from './styles/styles';
+import { Container, ProductsContainer, ProductsTitle } from '../styles/styles';
 import { LIST_TYPE } from '../utils/Constants';
 
 function Products({ user, productsLoaded, getUser, getProducts, redeem }) {
