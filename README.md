@@ -11,6 +11,7 @@ Catalog view for a loyalty program app made with React JS
 
 ## Live demo
 
+https://aerolab-challenge-iota.vercel.app/
 
 ## Installation
 
