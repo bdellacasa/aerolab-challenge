@@ -13,6 +13,11 @@ Catalog view for a loyalty program app made with React JS
 
 https://aerolab-challenge-iota.vercel.app/
 
+## Additional features to do
+
+- Redeem history
+- Favorites simulation using localstorage
+
 ## Installation
 
 - Download or clone the repo
