@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { Card, InfoContainer, Title, Text, RedeemContainer, CostText, ImageCost, Button, TextContainer, RedeemText } from './styles';
+import { Card, InfoContainer, Title, Text, RedeemContainer, CostText, ImageCost, Button, TextContainer, RedeemText, Placeholder } from './styles';
 
 const ProductCard = ({ name, category, cost, src, onClick }) => {
   const userPoints = useSelector((state) => state.user ? state.user.points : 0);
   const redeemable = userPoints > cost;
   const message = !redeemable ? `To redeem it you need ${cost - userPoints}` : 'This product is redeemable';
+  const [loadedImg, setLoadedImg] = useState(false);
 
   const handleOnClick = () => {
     onClick();
@@ -13,7 +14,10 @@ const ProductCard = ({ name, category, cost, src, onClick }) => {
 
   return (
     <Card>
-      <img src={src} />
+      {!loadedImg && <Placeholder />}
+      <div style={!loadedImg ? { overflow: 'hidden' } : {}}>
+        <img src={src} onLoad={() => setLoadedImg(true)} />
+      </div>
       <InfoContainer>
         <Title>{name}</Title>
         <Text>{category}</Text>

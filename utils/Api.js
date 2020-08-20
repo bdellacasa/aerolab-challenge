@@ -25,7 +25,7 @@ const request = async (path, method = "GET", param) => {
 
 const getUser = () => request("/user/me");
 const getProducts = () => request("/products");
-const addPoints = (amount = 1000) => request("/user/points", "POST", body({ amount }));
+const addPoints = (amount) => request("/user/points", "POST", body({ amount }));
 const redeem = (productId) => request("/redeem", "POST", body({ productId }));
 
 const API = {

@@ -23,6 +23,9 @@ export const ProductsContainer = styled(IndexContainer)`
   margin-top: 50px;
 `;
 
-export const ProductsTitle = styled(Title)`
+export const ProductsTitle = styled.h4`
+  padding-left: 8vw;
   padding-top: 85px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
 `;

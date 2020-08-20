@@ -1,5 +1,15 @@
 import styled from 'styled-components';
 
+export const Placeholder = styled.div`
+  width: 279px;
+  height: 160px;
+  background: #ffffff;
+
+  @media screen and (max-width: 420px) {
+    width: 259px;
+  }
+`;
+
 export const Card = styled.div`
   width: 280px;
   height: 390px;
