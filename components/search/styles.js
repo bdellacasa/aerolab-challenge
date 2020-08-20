@@ -2,23 +2,33 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  margin-top: 10px;
-  margin-left: 10vw;
 
-  @media screen and (max-width: 420px) {
-    margin-left: 0vw;
-    flex-direction: row;
+  @media screen and (min-width: 1024px) {
+    margin-left: 150px;
   }
+
 `;
 
 export const Input = styled.input`
-  width: 500px;
   padding-left: 10px;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 18px;
+  border: 1px solid #c9c7c7;
 
-  @media screen and (max-width: 420px) {
-    width: 80vw;
+  @media screen and (min-width: 320px) {
+    width: 260px;
+  }
+
+  @media screen and (min-width: 360px) {
+    width: 300px;
+  }
+
+  @media screen and (min-width: 640px) {
+    width: 400px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 500px;
   }
 `;
 

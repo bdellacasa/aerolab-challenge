@@ -84,7 +84,7 @@ export const TextContainer = styled.div`
 export const RedeemText = styled.div`
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  color: #807F7F;
+  color: ${(props) => props.redeemable ? '#007E33': '#807F7F'};
   
   @media screen and (max-width: 420px) {
     padding-top: 10px;

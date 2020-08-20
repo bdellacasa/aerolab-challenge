@@ -2,45 +2,51 @@ import styled from 'styled-components';
 
 export const Navbar = styled.nav`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   background: #ededed;
 
-  @media screen and (max-width: 600px) {
-    flex-direction: column;
-  }
-`;
-
-export const NavItem = styled.div`
-  flex-direction: column;
-
-  @media screen and (max-width: 600px) {
+  @media screen and (min-width: 1280px) {
     flex-direction: row;
   }
 `;
 
-export const NavCollapse = styled.div`
-  display: flex;
-  list-style-type: none;
+export const NavItem = styled.div`
+  flex-direction: row;
 
-  @media screen and (max-width: 600px) {
-    display: ${(props) => props.open ? 'flex' : 'none'};
+  @media screen and (min-width: 1280px) {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 `;
 
+export const NavCollapse = styled.div`
+  display: ${(props) => props.open ? 'flex' : 'none'};
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    flex-direction: row;
+  }
+
+`;
+
 export const Toggle = styled.div`
-  display: none;
+  display: block;
   position: absolute;
   top: 5px;
   right: 20px;
   color: #000000;
   font-size: 24px;
 
-  @media screen and (max-width: 600px) {
-    display: block;
+  @media screen and (min-width: 600px) {
+    top: 20px;
   }
+
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+
 `;
 
 export const Img = styled.img`
@@ -86,10 +92,13 @@ export const PointsContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 10px;
   margin-top: 10px;
   background: #D3D0D0;
   border-radius: 2em;
+
+  @media screen and (min-width: 1280px) {
+    margin-left: 10px;
+  }
 `;
 
 export const TextPoints = styled.div`
@@ -104,5 +113,8 @@ export const ImgCoin = styled.div`
 
 export const ImgBuy = styled(ImgCoin)`
   margin-top: 20px;
-  margin-left: 10px;
+
+  @media screen and (min-width: 1280px) {
+    margin-left: 10px;
+  }
 `;

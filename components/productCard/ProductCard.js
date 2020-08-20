@@ -24,7 +24,7 @@ const ProductCard = ({ name, category, cost, src, onClick }) => {
         </RedeemContainer>
       </InfoContainer>
       <TextContainer>
-        <RedeemText>{message}</RedeemText>
+        <RedeemText redeemable={redeemable}>{message}</RedeemText>
         {!redeemable && <ImageCost src="/icons/coin.svg" />}
       </TextContainer>
     </Card>

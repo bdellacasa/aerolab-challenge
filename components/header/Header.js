@@ -42,7 +42,7 @@ const Header = () => {
             <TextPoints><label>{points}</label></TextPoints>
             <ImgCoin><img src="/icons/coin.svg" /></ImgCoin>
           </PointsContainer>
-          <ImgBuy><BsPlusCircleFill size={30} color={"grey"} onClick={() => dispatch(addPoints())}/></ImgBuy>
+          <ImgBuy><BsPlusCircleFill size={30} color={"#848484"} onClick={() => dispatch(addPoints())}/></ImgBuy>
           <Link href="/products"><Text>Products</Text></Link>
         </TextContainer>
       </NavCollapse>
