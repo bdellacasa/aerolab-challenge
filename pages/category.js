@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { connect } from 'react-redux';
 import * as actions from '../redux/actions/Actions';
-import Layout from '../components/layout/Layout';
 import List from '../components/list/List';
 import { Container, ProductsContainer, ProductsTitle } from '../styles/styles';
 import { LIST_TYPE } from '../utils/Constants';
@@ -41,21 +40,13 @@ export function Category({ user, productsLoaded, getUser, getProducts, redeem })
     redeem(productId);
   }
 
-  const renderContent = () => {
-    return (
-      <Container>
-        <ProductsTitle>{title}</ProductsTitle>
-        <ProductsContainer>
-          <List data={products} type={LIST_TYPE.PRODUCTS} itemsPerPage={12} onClick={(productId) => redeemProduct(productId)} />
-        </ProductsContainer>
-      </Container>
-    )
-  }
-
   return (
-    <Layout>
-      {renderContent()}
-    </Layout>
+    <Container>
+      <ProductsTitle>{title}</ProductsTitle>
+      <ProductsContainer>
+        <List data={products} type={LIST_TYPE.PRODUCTS} itemsPerPage={12} onClick={(productId) => redeemProduct(productId)} />
+      </ProductsContainer>
+    </Container>
   )
 }
 

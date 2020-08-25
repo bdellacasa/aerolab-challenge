@@ -17,7 +17,7 @@ const categories = [
   },
   {
     name: "Cameras",
-    img: "/products/SonyPS4-x2.png"
+    img: "/products/SonyDSCRX10-x2.png"
   },
   {
     name: "Audio",

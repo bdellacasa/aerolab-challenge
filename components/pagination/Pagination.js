@@ -22,7 +22,6 @@ const Pagination = ({ total, currentPage, paginate }) => {
     );
   }
 
-
   return (
     <div className="pagination-container">
       {items}

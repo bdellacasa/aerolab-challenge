@@ -16,7 +16,7 @@ export const Title = styled.h3`
   padding-left: 8vw;
   padding-top: 100px;
   font-family: 'Lato', sans-serif;
-  font-weight: bold;
+  font-weight: 900;
 `;
 
 export const ProductsContainer = styled(IndexContainer)`

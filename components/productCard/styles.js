@@ -1,4 +1,19 @@
-import styled from 'styled-components';
+import styled, { keyframes, css }  from 'styled-components';
+
+const fadeInKeyframes = keyframes`
+  from {
+    filter: blur(3px);
+    opacity: 0;
+  }
+
+  to {
+    filter: blur(0);
+    opacity: 1;
+  }
+`
+
+export const fadeIn = ({ time = '0.6s', type = 'ease' } = {}) =>
+  css`animation: ${time} ${fadeInKeyframes} ${type};`
 
 export const Placeholder = styled.div`
   width: 279px;
@@ -11,6 +26,7 @@ export const Placeholder = styled.div`
 `;
 
 export const Card = styled.div`
+  ${fadeIn()}
   width: 280px;
   height: 390px;
   border: 1px solid #E9E7E7;

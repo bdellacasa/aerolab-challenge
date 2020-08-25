@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { connect } from 'react-redux';
 import * as actions from '../redux/actions/Actions';
-import Layout from '../components/layout/Layout';
 import Hero from '../components/hero/Hero';
 import List from '../components/list/List';
 import { Container, IndexContainer, Title } from '../styles/styles';
@@ -31,22 +30,14 @@ export function Index({ user, productsLoaded, getUser, getProducts }) {
     })
   };
 
-  const renderContent = () => {
-    return (
-      <Container>
-        <Hero imgUrl={'/header-x1.png'} />
-        <Title>Categories</Title>
-        <IndexContainer>
-          <List data={categories} type={LIST_TYPE.CATEGORIES} itemsPerPage={categories.length} onClick={(name) => selectCategory(name)} />
-        </IndexContainer>
-      </Container>
-    )
-  }
-
   return (
-    <Layout>
-      {renderContent()}
-    </Layout>
+    <Container>
+      <Hero imgUrl={'/header-x1.png'} />
+      <Title>Categories</Title>
+      <IndexContainer>
+        <List data={categories} type={LIST_TYPE.CATEGORIES} itemsPerPage={categories.length} onClick={(name) => selectCategory(name)} />
+      </IndexContainer>
+    </Container>
   )
 }
 

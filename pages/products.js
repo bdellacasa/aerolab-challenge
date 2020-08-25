@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 import { connect } from 'react-redux';
 import * as actions from '../redux/actions/Actions';
 import { checkWordMatch } from '../utils/Helpers';
-import Layout from '../components/layout/Layout';
 import List from '../components/list/List';
 import { Container, ProductsContainer, ProductsTitle } from '../styles/styles';
 import { LIST_TYPE } from '../utils/Constants';
@@ -47,24 +46,16 @@ function Products({ user, productsLoaded, getUser, getProducts, redeem }) {
     redeem(productId);
   }
 
-  const renderContent = () => {
-    return (
-      <Container>
-        <div>
-          {router.query.name && products.length > 0 && <ProductsTitle>{title}</ProductsTitle>}
-          <ProductsTitle>{productQuantity}</ProductsTitle>
-        </div>
-        <ProductsContainer>
-          <List data={products} type={LIST_TYPE.PRODUCTS} itemsPerPage={12} onClick={(productId) => redeemProduct(productId)} />
-        </ProductsContainer>
-      </Container>
-    )
-  }
-
   return (
-    <Layout>
-      {renderContent()}
-    </Layout>
+    <Container>
+      <div>
+        {router.query.name && products.length > 0 && <ProductsTitle>{title}</ProductsTitle>}
+        <ProductsTitle>{productQuantity}</ProductsTitle>
+      </div>
+      <ProductsContainer>
+        <List data={products} type={LIST_TYPE.PRODUCTS} itemsPerPage={12} onClick={(productId) => redeemProduct(productId)} />
+      </ProductsContainer>
+    </Container>
   )
 }
 
