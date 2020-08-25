@@ -19,7 +19,7 @@ export const Title = styled.h3`
   font-weight: 900;
 `;
 
-export const ProductsContainer = styled(IndexContainer)`
+export const ProductsListContainer = styled(IndexContainer)`
   margin-top: 50px;
 `;
 
